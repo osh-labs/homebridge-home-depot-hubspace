@@ -6,7 +6,8 @@ export enum DeviceType {
     Light = 'light',
     Fan = 'fan',
     Outlet = 'power-outlet',
-    Switch = 'switch'
+    Switch = 'switch',
+    Transformer = 'landscape-transformer'
 }
 
 /**
@@ -24,6 +25,8 @@ export function getDeviceTypeForKey(key: string): DeviceType {
             return DeviceType.Outlet;
         case 'switch':
             return DeviceType.Switch;
+        case 'landscape-transformer':
+            return DeviceType.Transformer;
         default:
             return DeviceType.None;
     }

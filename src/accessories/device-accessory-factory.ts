@@ -7,6 +7,7 @@ import { HubspaceAccessory } from './hubspace-accessory';
 import { LightAccessory } from './light-accessory';
 import { OutletAccessory } from './outlet-accessory';
 import { SwitchAccessory } from './switch-accessory';
+import { TransformerAccessory } from './transformer-accessory';
 
 /**
  * Creates {@link HubspaceAccessory} for a specific {@link DeviceType}
@@ -26,6 +27,8 @@ export function createAccessoryForDevice(device: Device, platform: HubspacePlatf
             return new OutletAccessory(platform, accessory);
         case DeviceType.Switch:
             return new SwitchAccessory(platform, accessory);
+        case DeviceType.Transformer:
+            return new TransformerAccessory(platform, accessory);
         default:
             throw new Error(`Accessory of type '${device.type}' is not supported.`);
     }

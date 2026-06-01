@@ -53,6 +53,16 @@ export const Devices: DeviceDef[] = [
         ]
     },
     {
+        deviceClass: 'landscape-transformer',
+        deviceType: DeviceType.Transformer,
+        functions: [
+            {
+                functionClass: 'power',
+                characteristic: FunctionCharacteristic.Power
+            }
+        ]
+    },
+    {
         deviceClass: 'switch',
         deviceType: DeviceType.Switch,
         functions: [
